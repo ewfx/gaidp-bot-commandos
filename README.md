@@ -1,60 +1,81 @@
-# 🚀 Project Name
+# Transaction Compliance Checker
 
-## 📌 Table of Contents
-- [Introduction](#introduction)
-- [Demo](#demo)
-- [Inspiration](#inspiration)
-- [What It Does](#what-it-does)
-- [How We Built It](#how-we-built-it)
-- [Challenges We Faced](#challenges-we-faced)
-- [How to Run](#how-to-run)
-- [Tech Stack](#tech-stack)
-- [Team](#team)
+This project provides a **Transaction Compliance Checker** using **Streamlit** for the frontend and **FastAPI** for the backend. The system validates transactions against compliance rules for two sections: **H1** and **H2**.
 
----
+## Features
+- User-friendly **Streamlit UI** for manual transaction input.
+- **FastAPI backend** to process compliance checks.
+- Supports two compliance sections: **H1** and **H2**.
+- Real-time validation and risk assessment.
 
-## 🎯 Introduction
-A brief overview of your project and its purpose. Mention which problem statement are your attempting to solve. Keep it concise and engaging.
+## Installation
 
-## 🎥 Demo
-🔗 [Live Demo](#) (if applicable)  
-📹 [Video Demo](#) (if applicable)  
-🖼️ Screenshots:
+### Prerequisites
+Ensure you have the following installed:
+- Python 3.8+
+- pip
 
-![Screenshot 1](link-to-image)
+### Clone the Repository
+```sh
+git clone https://github.com/your-repo/transaction-compliance-checker.git
+cd transaction-compliance-checker
+```
 
-## 💡 Inspiration
-What inspired you to create this project? Describe the problem you're solving.
+### Set Up a Virtual Environment (Optional but Recommended)
+```sh
+python -m venv venv
+source venv/bin/activate  # On Windows use: venv\Scripts\activate
+```
 
-## ⚙️ What It Does
-Explain the key features and functionalities of your project.
+### Install Dependencies
+```sh
+pip install -r requirements.txt
+```
 
-## 🛠️ How We Built It
-Briefly outline the technologies, frameworks, and tools used in development.
+## Running the Application
 
-## 🚧 Challenges We Faced
-Describe the major technical or non-technical challenges your team encountered.
+### 1. Start the Backend (FastAPI)
+```sh
+cd backend  # Navigate to backend folder if applicable
+uvicorn main:app --reload
+```
+This will start the API at `http://127.0.0.1:8000`.
 
-## 🏃 How to Run
-1. Clone the repository  
-   ```sh
-   git clone https://github.com/your-repo.git
-   ```
-2. Install dependencies  
-   ```sh
-   npm install  # or pip install -r requirements.txt (for Python)
-   ```
-3. Run the project  
-   ```sh
-   npm start  # or python app.py
-   ```
+### 2. Start the Frontend (Streamlit UI)
+In another terminal, run:
+```sh
+cd frontend  # Navigate to frontend folder if applicable
+streamlit run app.py
+```
+This will launch the UI in your browser.
 
-## 🏗️ Tech Stack
-- 🔹 Frontend: React / Vue / Angular
-- 🔹 Backend: Node.js / FastAPI / Django
-- 🔹 Database: PostgreSQL / Firebase
-- 🔹 Other: OpenAI API / Twilio / Stripe
+## Usage
+1. Open the Streamlit UI.
+2. Select **H1 Compliance** or **H2 Compliance**.
+3. Enter transaction details.
+4. Click **Check Compliance**.
+5. View validation results, risk score, and suggested remedies.
 
-## 👥 Team
-- **Your Name** - [GitHub](#) | [LinkedIn](#)
-- **Teammate 2** - [GitHub](#) | [LinkedIn](#)
+## API Reference
+### Check Compliance Endpoint
+```
+POST http://127.0.0.1:8000/check_compliance/{section}
+```
+**Path Parameter:**
+- `section`: `H1` or `H2`
+
+**Request Body:**
+- JSON object containing transaction details.
+
+**Response:**
+```json
+{
+  "compliant": "Yes" or "No",
+  "risk_score": 85,
+  "violated_rules": ["Rule 1", "Rule 2"],
+  "remedies": ["Suggestion 1", "Suggestion 2"]
+}
+```
+
+
+
