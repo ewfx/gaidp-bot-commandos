@@ -1,14 +1,8 @@
 fastapi
 uvicorn
 langchain
-chromadb
+langchain-community
+langchain-groq
+pypdf
 streamlit
-pydantic
 requests
-pandas
-numpy
-openai
-groq
-python-dotenv
-pytest
-logging

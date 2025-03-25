@@ -26,6 +26,14 @@ cd gaidp-bot-commandos
 ```sh
 pip install -r requirements.txt
 ```
+## Short Notes on each python package
+uvicorn is needed to run the FastAPI server.
+
+langchain-community provides PyPDFLoader, so it's included.
+
+pypdf is required because PyPDFLoader internally depends on it.
+
+re and os are built-in Python modules, so they don’t need to be installed.
 
 ## Running the Application
 
