@@ -17,15 +17,10 @@ Ensure you have the following installed:
 
 ### Clone the Repository
 ```sh
-git clone https://github.com/your-repo/transaction-compliance-checker.git
-cd transaction-compliance-checker
+git clone https://github.com/ewfx/gaidp-bot-commandos.git
+cd gaidp-bot-commandos
 ```
 
-### Set Up a Virtual Environment (Optional but Recommended)
-```sh
-python -m venv venv
-source venv/bin/activate  # On Windows use: venv\Scripts\activate
-```
 
 ### Install Dependencies
 ```sh
@@ -36,7 +31,6 @@ pip install -r requirements.txt
 
 ### 1. Start the Backend (FastAPI)
 ```sh
-cd backend  # Navigate to backend folder if applicable
 uvicorn main:app --reload
 ```
 This will start the API at `http://127.0.0.1:8000`.
@@ -44,7 +38,6 @@ This will start the API at `http://127.0.0.1:8000`.
 ### 2. Start the Frontend (Streamlit UI)
 In another terminal, run:
 ```sh
-cd frontend  # Navigate to frontend folder if applicable
 streamlit run app.py
 ```
 This will launch the UI in your browser.
