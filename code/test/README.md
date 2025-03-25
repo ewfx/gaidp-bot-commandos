@@ -1,3 +1,1 @@
-## Delete this file
-
-Instead place your test files here
+Test screenshots were taken for both H1 and H2 sections including UI's look and feel
