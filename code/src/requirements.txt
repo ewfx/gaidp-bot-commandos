@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+langchain
+chromadb
+streamlit
+pydantic
+requests
+pandas
+numpy
+openai
+groq
+python-dotenv
+pytest
+logging
